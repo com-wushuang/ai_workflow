@@ -1,5 +1,8 @@
 # UI Specification
 Status: Draft
+Version: 0.1
+Delivery mode: Visual Required | Spec Only (explicit user choice required)
+Visual delivery: Pending | Delivered | Not delivered by agreed exception
 Approved UX source: TBD
 
 ## Platform, viewport and constraints

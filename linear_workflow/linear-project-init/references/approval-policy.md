@@ -11,7 +11,7 @@ Before the first write, show:
 - Unsupported operations and manual fallbacks
 - Explicit statement: **No Linear changes have been made yet**
 
-Ask: `是否批准按以上计划初始化 Linear 项目？` Wait for an unambiguous yes. Ambiguous replies mean no approval.
+Ask: `是否批准按以上计划初始化 Linear 项目？` Reuse explicit existing approval of this exact batch; otherwise wait for an unambiguous yes. Ambiguous replies mean no approval.
 
 ## Scope of approval
 Approval covers only the shown changes. Obtain fresh approval for:

@@ -13,7 +13,7 @@ This is a **proposed template**, not a claim about pre-existing Linear objects. 
 2. `02 · MVP Planning` — deliverable: approved MVP Scope
 3. `03 · Requirements` — deliverable: approved PRD
 4. `04 · UX/UI Design` — deliverable: reviewed designs and specifications
-5. `05 · Development` — deliverable: implemented and tested MVP
+5. `05 · Development` — approved planning artifacts followed by a separately authorized implementation task; complete only with implemented and tested MVP evidence
 6. `06 · Validation & Release` — deliverable: validation and release record
 
 Milestones are phases, not a claim that work must proceed in a rigid waterfall. If the MCP cannot create milestones, flag them as manual; do not silently substitute labels or issues.
@@ -30,7 +30,10 @@ Default all new issues to the team's ordinary backlog/to-do state; do not set de
 ## Documents
 - `Product Brief` — optional Linear Project Document, if the MCP supports it and the user approved creating it.
 - Canonical Markdown location, if the user wants Git-managed docs: `docs/product/Product-Brief.md`.
-- Decide with the user whether Linear Document or Git Markdown is the canonical source to prevent conflicting versions. Linking is preferable to maintaining two editable masters.
+- Git Markdown is canonical for text; Linear documents are labeled mirrors. If an existing project uses Linear as canonical, request a migration decision before creating another master.
 
 ## Future work
 Do not pre-populate detailed MVP, PRD, UX, or development issues during initialization. Add them when their upstream stage is reviewed.
+
+## Skill mapping
+Use the lifecycle table in `operating-contract.md`. UX and UI share milestone 04; Development Planning and separately authorized Implementation share milestone 05. Planning completion never completes Development. Preserve existing custom milestone IDs and record their mapping.

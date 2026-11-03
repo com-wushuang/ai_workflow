@@ -1,4 +1,6 @@
 # Test Strategy
+
+Artifact version: 0.1; approval: Pending (record approved version and actual approval reference in docs/workflow-state.md).
 Status: Draft
 
 ## Requirement-to-test traceability

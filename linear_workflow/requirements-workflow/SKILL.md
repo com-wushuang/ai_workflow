@@ -5,6 +5,9 @@ description: Convert an approved MVP Scope into a reviewed PRD, user stories and
 
 # Requirements Workflow
 
+## Operating contract
+Read `references/operating-contract.md` on entry for authorization, canonical sources, durable approval state, lifecycle mapping and recovery.
+
 ## Mission and boundary
 Own ONLY the Requirements / PRD stage. Never start UX, UI, engineering design, coding, testing or another lifecycle workflow. A recommendation about next steps is not authorization to execute them. On completion, report and STOP.
 
@@ -26,22 +29,22 @@ All stable rules are in this skill; do not ask the user to repeat them.
 
 ## Workflow (one phase at a time)
 ### Phase 1 — Scope traceability
-Map each approved MVP capability to its user, problem, intended outcome and source section. Flag missing rationale or ambiguous scope. Ask at most two high-impact questions per round. Obtain user confirmation before continuing.
+Map each approved MVP capability to its user, problem, intended outcome and source section. Flag missing rationale or ambiguous scope. Ask at most two high-impact questions per round. Continue unless a material decision is unresolved.
 
 ### Phase 2 — Requirements discovery
-For each in-scope capability, elicit actors, triggers, main flow, alternate/error flows, data and permissions, business rules, integrations and dependencies. Distinguish facts, decisions, assumptions and proposals. Avoid inventing behavior. Obtain confirmation.
+For each in-scope capability, elicit actors, triggers, main flow, alternate/error flows, data and permissions, business rules, integrations and dependencies. Distinguish facts, decisions, assumptions and proposals. Avoid inventing behavior. Pause only for material unresolved decisions.
 
 ### Phase 3 — Stories and acceptance criteria
-Create testable user stories and scenario-based acceptance criteria (Given/When/Then where useful). Include negative cases, edge cases, and relevant nonfunctional requirements. Assign stable requirement IDs and map them to MVP capabilities. Obtain confirmation.
+Create testable user stories and scenario-based acceptance criteria (Given/When/Then where useful). Include negative cases, edge cases, and relevant nonfunctional requirements. Assign stable requirement IDs and map them to MVP capabilities. Pause only for material unresolved decisions.
 
 ### Phase 4 — PRD drafting
 Write `docs/product/PRD.md` and `docs/product/User-Stories.md` using reference templates. Maintain `docs/product/requirements-decision-log.md` and `docs/product/requirements-open-questions.md` as needed. Mark status Draft. Preserve links to Brief and MVP Scope and a requirement-to-scope traceability table. Do not mark approved without explicit user authorization.
 
-### Phase 5 — Independent review gate
+### Phase 5 — Review gate
 Use `references/review-gate.md`. Inspect scope fidelity, completeness, ambiguity, feasibility questions, testability, contradictions, privacy/security and unresolved decisions. Present findings, ask for corrections, revise. Approval must be an explicit user decision; otherwise leave Draft/Needs Revision.
 
 ### Phase 6 — Controlled Linear synchronization
-Read `references/linear-sync.md`. Show a concrete write plan (objects, fields, links and status changes). Request explicit approval for the write plan. Then call only supported Linear MCP operations; verify by reading back. If Document writes are unsupported, link the canonical Git files or report the limitation. Do not create implementation issues by default; user must separately approve issue decomposition.
+Read `references/linear-sync.md`. Show a concrete write plan (objects, fields, links and status changes). Reuse existing authorization for this batch, or request it if missing. Then call only supported Linear MCP operations; verify by reading back. If Document writes are unsupported, link the canonical Git files or report the limitation. Do not create implementation issues by default; user must separately approve issue decomposition.
 
 ### Phase 7 — Stop
 Report PRD and stories paths, approval state, open questions, Linear links, and any verification failures. STOP. Do not invoke another skill or start UX/engineering. Never interpret approval of PRD as permission for the next stage.
@@ -49,10 +52,10 @@ Report PRD and stories paths, approval state, open questions, Linear links, and 
 ## Cross-cutting rules
 - User owns product decisions. AI suggestions must be labeled as suggestions.
 - No more than TWO substantive interview questions per round.
-- Each phase ends with a brief recap and a request for confirmation before advancing.
+- Internal phases continue without permission requests; summarize material findings.
 - Git writes to the working documents are allowed for drafting; never commit, push, merge, delete, or rewrite approved artifacts without explicit approval.
 - Linear is a tracker, not the source of truth for PRD text; canonical Markdown in Git is authoritative.
-- Before ANY Linear write, present the exact proposed changes and obtain approval.
+- Authorize Linear changes once per concrete batch under the operating contract.
 - Do not treat tool execution success as proof of final state: read back and verify.
 - Do not call cross-stage PM Skills orchestration commands even if available.
 - If the user asks to pause, stop without progressing; summarize state and resume point.

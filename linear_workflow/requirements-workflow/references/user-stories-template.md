@@ -1,5 +1,7 @@
 # User Stories and Acceptance Criteria
 
+Artifact version: 0.1; approval: Pending (record approved version and actual approval reference in docs/workflow-state.md).
+
 > Status: Draft
 > Source: PRD.md / approved MVP-Scope.md
 

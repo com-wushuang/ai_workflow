@@ -5,6 +5,9 @@ description: Initialize or reconcile a product lifecycle project in Linear using
 
 # Linear Project Initialization
 
+## Operating contract
+Read `references/operating-contract.md` on entry for authorization, canonical sources, durable approval state, lifecycle mapping and recovery.
+
 ## Purpose
 Initialize a lightweight product lifecycle structure in Linear from Codex. Linear is the project/task system of record; product documents and code may live in Git and be linked from Linear.
 

@@ -4,4 +4,5 @@
 - API/data/security/nonfunctional needs addressed.
 - Tests, rollback and operational readiness planned.
 - No coding or issue creation before explicit approval.
-- User approves technical plan and backlog, with date/version/exceptions.
+- User approves Technical Plan, Implementation Backlog, Test Strategy and Implementation Handoff, with versions and exceptions.
+- Handoff identifies implementation owner/task (or Pending), required return evidence and the Validation entry contract; Development milestone remains open until implementation is verified.

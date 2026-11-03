@@ -1,5 +1,7 @@
 # MVP Scope — <Project>
 
+Artifact version: 0.1; approval: Pending (record approved version and actual approval reference in docs/workflow-state.md).
+
 Status: Draft | Approved
 Owner: <user-confirmed>
 Source Product Brief: <path + version / approval reference>

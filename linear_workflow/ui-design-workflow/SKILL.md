@@ -6,6 +6,9 @@ description: Run only the UI Design lifecycle stage for a named Linear project u
 
 # UI Design Workflow
 
+## Operating contract
+Read `references/operating-contract.md` on entry for authorization, canonical sources, durable approval state, lifecycle mapping and recovery.
+
 ## Scope and invocation
 Invoke with `使用 $ui-design-workflow 开始 <项目名称> 的UI Design`. Own ONLY this stage. Never start Development Planning or any other lifecycle stage.
 
@@ -21,27 +24,27 @@ Invoke with `使用 $ui-design-workflow 开始 <项目名称> 的UI Design`. Own
 
 ### Phase 1: Input and visual artifact discovery
 Read approved UX deliverables, PRD, any existing Figma/design system assets. Verify source files are accessible; identify missing visuals.
-At phase end, show findings and request confirmation before advancing.
+Summarize material findings and continue; pause only under the operating contract.
 
-### Phase 2: Visual direction
-Ask about brand, visual priorities, platform and accessibility constraints; present limited alternatives and obtain selection.
-At phase end, show findings and request confirmation before advancing.
+### Phase 2: Visual direction and delivery mode
+Read existing brand, visual priorities, platform and accessibility constraints. Record delivery mode: Visual Required (default), or Spec Only only on explicit user choice. Tool unavailability does not silently change the mode. Present material unresolved alternatives for selection.
+Summarize material findings and continue; pause only under the operating contract.
 
 ### Phase 3: Design system
 Define tokens, typography, spacing, colors, components, variants, states and responsive rules; validate contrast and accessibility where feasible.
-At phase end, show findings and request confirmation before advancing.
+Summarize material findings and continue; pause only under the operating contract.
 
 ### Phase 4: High-fidelity screens
-Specify or create actual high-fidelity designs only using an available authorized design tool; otherwise create implementation-ready screen specs and clearly label visuals as pending.
-At phase end, show findings and request confirmation before advancing.
+Specify or create actual high-fidelity designs only using an available authorized design tool; otherwise create implementation-ready screen specs and clearly label visuals as pending. In Visual Required mode, missing visuals block stage completion; local specs may still be delivered. In explicitly selected Spec Only mode, approve specifications only and record that visual design was not delivered.
+Summarize material findings and continue; pause only under the operating contract.
 
 ### Phase 5: Design QA and approval
 Review against UX flows, consistency, responsive layouts, component states and accessibility. Obtain explicit approval.
-At phase end, show findings and request confirmation before advancing.
+Summarize material findings and continue; pause only under the operating contract.
 
 ### Phase 6: Linear sync and stop
-Show write plan, request authorization, update only supported objects, verify and STOP.
-At phase end, show findings and request confirmation before advancing.
+Show write plan, reuse existing authorization or request it if missing, update only supported objects, verify and STOP.
+Summarize material findings and continue; pause only under the operating contract.
 
 ## Deliverables
 
@@ -67,10 +70,10 @@ At phase end, show findings and request confirmation before advancing.
 
 ## Shared operating rules
 - User makes all product and approval decisions. Clearly distinguish confirmed facts, assumptions, and AI proposals.
-- Ask no more than TWO substantive questions per interview turn. At the end of each phase, recap and request explicit approval to advance within this stage.
+- Ask at most two substantive questions per round; internal phase transitions do not require approval.
 - Discover installed PM Skills and read their actual SKILL.md before using them. Use only skills relevant to this stage; never invoke a cross-stage orchestrator. If unavailable, use this skill's own reference templates.
 - Discover actual Linear MCP capabilities, read the named project and its milestones/issues first, and reuse existing objects. Never invent tool names or pretend unsupported operations succeeded.
-- Before EVERY Linear write, present an exact write plan and obtain separate explicit authorization; after writing, read back and verify. A document approval is not automatically authorization to write to Linear.
+- Follow the operating contract for batch write authorization and read-back verification; do not ask again for an authorized batch.
 - Git Markdown is the canonical source for text deliverables. Check existing files and resume; don't overwrite approved content without permission. Do not git commit, push, merge or delete without explicit authorization.
 - If entry approvals are missing, stop and ask. File presence, a completed issue or an advanced milestone alone do not prove approval.
 - On completion, report artifact paths, approval status, unresolved risks and verified Linear changes, then STOP. Never start the next lifecycle stage or ask its interview questions.

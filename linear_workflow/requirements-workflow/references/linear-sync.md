@@ -14,3 +14,5 @@ Present a change table: object, identifier, current value, proposed value, ratio
 - Read back changes and report confirmed vs failed/unsupported operations.
 
 If no repository remote URL exists, record relative paths and explain that Linear cannot link to a remote document until it is published. Do not push Git automatically.
+
+Authorization and recovery follow `operating-contract.md`: reuse existing approval for the exact batch, do not request approval per API call, and resume partial writes from verified state.
